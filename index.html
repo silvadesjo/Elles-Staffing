@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elles Staffing — Brand Ambassador Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0e0d0b;
+    --white: #f9f6f1;
+    --cream: #f0ebe3;
+    --terracotta: #c9633e;
+    --terracotta-light: #e8a98a;
+    --terracotta-dark: #8f3d22;
+    --mustard: #c9a237;
+    --deep-green: #2d4a3e;
+    --charcoal: #2a2825;
+    --mid: #6b6560;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+    --border: 1px solid rgba(14,13,11,0.15);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 3rem;
+    background: rgba(249,246,241,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: var(--border);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.55rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--black);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--terracotta); }
+  .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--terracotta); }
+  .nav-cta {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--terracotta);
+    border: none;
+    padding: 0.65rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--terracotta-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+  }
+  .hero-left {
+    background: var(--deep-green);
+    padding: 6rem 3.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(249,246,241,0.12);
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    bottom: 60px; left: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,163,55,0.25);
+  }
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mustard);
+    margin-bottom: 1.8rem;
+  }
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(3.2rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--terracotta-light);
+  }
+  .hero-sub {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: rgba(249,246,241,0.72);
+    max-width: 380px;
+    margin-bottom: 3rem;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--terracotta);
+    border: none;
+    padding: 0.9rem 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--terracotta-dark); }
+  .btn-outline {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid rgba(249,246,241,0.35);
+    padding: 0.9rem 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--white); }
+  .hero-right {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-photo-fill {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.85);
+  }
+  .hero-photo-placeholder {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #d6cfc7 0%, #b8afa5 100%);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    min-height: 540px;
+  }
+  .hero-photo-placeholder::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(201,99,62,0.06) 40px,
+      rgba(201,99,62,0.06) 41px
+    );
+  }
+  .photo-label {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(42,40,37,0.5);
+    z-index: 1;
+  }
+  .hero-stat-bar {
+    grid-column: 1 / -1;
+    background: var(--charcoal);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.8rem 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--mustard);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(249,246,241,0.55);
+  }
+  .stat-divider {
+    width: 1px; height: 40px;
+    background: rgba(249,246,241,0.12);
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 7rem 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .section-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .intro h2 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 4vw, 3.6rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--black);
+    margin-bottom: 1.8rem;
+  }
+  .intro h2 em { font-style: italic; color: var(--terracotta); }
+  .intro p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--mid);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ── SERVICES ── */
+  .services { background: var(--cream); padding: 7rem 3rem; }
+  .services-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .services-header h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--black);
+    max-width: 520px;
+  }
+  .services-header p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--mid);
+    max-width: 280px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(14,13,11,0.1);
+  }
+  .service-card {
+    background: var(--cream);
+    padding: 3rem 2.5rem;
+    transition: background 0.3s;
+    cursor: default;
+  }
+  .service-card:hover { background: var(--deep-green); }
+  .service-card:hover .service-num,
+  .service-card:hover .service-title,
+  .service-card:hover .service-desc { color: var(--white); }
+  .service-card:hover .service-icon { border-color: rgba(249,246,241,0.2); }
+  .service-num {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--terracotta);
+    display: block;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+  .service-icon {
+    width: 48px; height: 48px;
+    border: 1px solid rgba(14,13,11,0.15);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    transition: border-color 0.3s;
+  }
+  .service-title {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    transition: color 0.3s;
+  }
+  .service-desc {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: var(--mid);
+    transition: color 0.3s;
+  }
+
+  /* ── WHY ELLES ── */
+  .why {
+    padding: 8rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+  .why-left h2 {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--black);
+    margin-bottom: 1.8rem;
+  }
+  .why-left h2 em { font-style: italic; color: var(--terracotta); }
+  .why-left p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--mid);
+    margin-bottom: 2.5rem;
+  }
+  .why-list { list-style: none; }
+  .why-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    border-top: var(--border);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--charcoal);
+  }
+  .why-list li:last-child { border-bottom: var(--border); }
+  .why-list li::before {
+    content: '→';
+    color: var(--terracotta);
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .why-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .why-card {
+    background: var(--cream);
+    padding: 2rem 1.5rem;
+    border: var(--border);
+  }
+  .why-card.accent { background: var(--terracotta); border-color: var(--terracotta); }
+  .why-card.dark { background: var(--deep-green); border-color: var(--deep-green); grid-column: 1 / -1; }
+  .why-card-num {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--black);
+    display: block;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+  .why-card.accent .why-card-num,
+  .why-card.accent .why-card-label { color: var(--white); }
+  .why-card.dark .why-card-num { color: var(--mustard); }
+  .why-card.dark .why-card-label { color: rgba(249,246,241,0.65); }
+  .why-card-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: var(--mid);
+    line-height: 1.5;
+  }
+
+  /* ── PROCESS ── */
+  .process { background: var(--charcoal); padding: 8rem 3rem; }
+  .process-inner { max-width: 1100px; margin: 0 auto; }
+  .process-inner > .section-tag { color: var(--mustard); margin-bottom: 1rem; }
+  .process-inner > h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 4rem;
+    max-width: 600px;
+    line-height: 1.2;
+  }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .step {
+    padding: 2.5rem 2rem;
+    border-left: 1px solid rgba(249,246,241,0.1);
+    position: relative;
+  }
+  .step:last-child { border-right: 1px solid rgba(249,246,241,0.1); }
+  .step-num {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(249,246,241,0.12);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .step-title {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+  }
+  .step-desc {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: rgba(249,246,241,0.5);
+  }
+
+  /* ── CLIENTS / INDUSTRIES ── */
+  .industries { padding: 7rem 3rem; }
+  .industries-inner { max-width: 1100px; margin: 0 auto; }
+  .industries-inner > .section-tag { margin-bottom: 1rem; }
+  .industries-inner > h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 300;
+    color: var(--black);
+    margin-bottom: 3.5rem;
+    max-width: 560px;
+    line-height: 1.2;
+  }
+  .industry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(14,13,11,0.1);
+  }
+  .industry-item {
+    background: var(--white);
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: background 0.25s;
+  }
+  .industry-item:hover { background: var(--cream); }
+  .industry-icon { font-size: 1.3rem; }
+  .industry-name {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black);
+  }
+  .industry-desc {
+    font-size: 0.78rem;
+    line-height: 1.65;
+    color: var(--mid);
+  }
+
+  /* ── ROSTER / TALENT ── */
+  .roster { background: var(--deep-green); padding: 8rem 3rem; }
+  .roster-inner { max-width: 1100px; margin: 0 auto; }
+  .roster-inner > .section-tag { color: var(--mustard); margin-bottom: 1rem; }
+  .roster-inner > h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    max-width: 580px;
+    line-height: 1.2;
+  }
+  .roster-inner > p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: rgba(249,246,241,0.65);
+    max-width: 560px;
+    margin-bottom: 4rem;
+  }
+  .roster-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+  .roster-feat {
+    border-top: 1px solid rgba(249,246,241,0.15);
+    padding-top: 1.5rem;
+  }
+  .roster-feat-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+  .roster-feat-desc {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: rgba(249,246,241,0.5);
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 0 3rem;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+  .cta-block {
+    background: var(--terracotta);
+    padding: 5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 3rem;
+    margin: 6rem 0;
+  }
+  .cta-block h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.15;
+  }
+  .cta-block h2 em { font-style: italic; }
+  .cta-block-btns { display: flex; flex-direction: column; gap: 1rem; flex-shrink: 0; }
+  .btn-white {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    background: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .btn-white:hover { background: var(--cream); }
+  .btn-outline-white {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid rgba(249,246,241,0.5);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: border-color 0.2s;
+    white-space: nowrap;
+  }
+  .btn-outline-white:hover { border-color: var(--white); }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--cream); padding: 7rem 3rem; }
+  .contact-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+  .contact-left h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 300;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+  .contact-left p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--mid);
+    margin-bottom: 2.5rem;
+  }
+  .contact-details { display: flex; flex-direction: column; gap: 1.2rem; }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+  .contact-item-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 500;
+    width: 72px;
+    flex-shrink: 0;
+    padding-top: 0.1rem;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    font-weight: 500;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--white);
+    border: 1px solid rgba(14,13,11,0.15);
+    padding: 0.85rem 1rem;
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--black);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--terracotta); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-submit {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--terracotta);
+    border: none;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+  }
+  .form-submit:hover { background: var(--terracotta-dark); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    padding: 4rem 3rem 2.5rem;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(249,246,241,0.1);
+  }
+  .footer-brand-name {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+  }
+  .footer-brand-name span { color: var(--terracotta-light); }
+  .footer-tagline {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: rgba(249,246,241,0.45);
+    margin-bottom: 2rem;
+    max-width: 260px;
+  }
+  .footer-socials { display: flex; gap: 0.75rem; }
+  .social-link {
+    width: 34px; height: 34px;
+    border: 1px solid rgba(249,246,241,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: rgba(249,246,241,0.55);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .social-link:hover { border-color: var(--terracotta-light); color: var(--terracotta-light); }
+  .footer-col-title {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(249,246,241,0.35);
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+  .footer-links a {
+    font-size: 0.83rem;
+    color: rgba(249,246,241,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom p {
+    font-size: 0.75rem;
+    color: rgba(249,246,241,0.3);
+  }
+
+  /* ── TEAM ── */
+  .team { padding: 8rem 3rem; background: var(--white); }
+  .team-inner { max-width: 1100px; margin: 0 auto; }
+  .team-inner > .section-tag { margin-bottom: 1rem; }
+  .team-inner > h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    color: var(--black);
+    margin-bottom: 0.8rem;
+    line-height: 1.15;
+  }
+  .team-inner > p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--mid);
+    max-width: 540px;
+    margin-bottom: 4rem;
+  }
+  .team-layer-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--charcoal);
+    display: inline-block;
+    padding: 0.45rem 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: rgba(14,13,11,0.1);
+    margin-bottom: 3.5rem;
+  }
+  .team-card {
+    background: var(--white);
+    padding: 2rem 2rem 2.2rem;
+    transition: background 0.25s;
+  }
+  .team-card:hover { background: var(--cream); }
+  .team-avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.4rem;
+  }
+  .team-avatar.founder { background: var(--terracotta); color: var(--white); }
+  .team-avatar.ops { background: var(--deep-green); color: rgba(249,246,241,0.9); }
+  .team-avatar.talent { background: var(--mustard); color: var(--charcoal); }
+  .team-avatar.marketing { background: #3b3058; color: rgba(249,246,241,0.9); }
+  .team-avatar.client { background: var(--charcoal); color: rgba(249,246,241,0.9); }
+  .team-avatar.tbd { background: var(--cream); color: var(--mid); border: 1px dashed rgba(14,13,11,0.2); }
+  .team-name {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 0.3rem;
+  }
+  .team-role {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .team-layer-badge {
+    font-size: 0.7rem;
+    color: var(--mid);
+    letter-spacing: 0.06em;
+  }
+  .team-leads-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5px;
+    background: rgba(14,13,11,0.1);
+  }
+  .team-card.open .team-name { color: var(--mid); font-style: italic; }
+  .team-card.open .team-avatar { border: 1px dashed rgba(14,13,11,0.2); background: var(--cream); color: var(--mid); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { min-height: 340px; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .why { grid-template-columns: 1fr; gap: 3rem; }
+    .industry-grid { grid-template-columns: repeat(2, 1fr); }
+    .roster-features { grid-template-columns: 1fr 1fr; }
+    .cta-block { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    .team-grid { grid-template-columns: 1fr 1fr; }
+    .team-leads-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 540px) {
+    .team-grid { grid-template-columns: 1fr; }
+    .team-leads-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .industry-grid { grid-template-columns: 1fr; }
+    .roster-features { grid-template-columns: 1fr; }
+    .hero-stat-bar { flex-direction: column; gap: 1.5rem; }
+    .stat-divider { display: none; }
+    .why-right { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Elles<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#talent">Talent</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Talent</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Toronto's Premier Brand Ambassador Agency</span>
+    <h1 class="hero-headline">
+      Interactions<br/>
+      that <em>move</em><br/>
+      people.
+    </h1>
+    <p class="hero-sub">
+      Elles Staffing connects brands with elite brand ambassadors, promotional models, and experiential marketing talent across Canada — for activations that leave a lasting impression.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Book Talent</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-placeholder">
+      <span class="photo-label">Brand Ambassadors in Action</span>
+      <span style="font-size:0.75rem; color: rgba(42,40,37,0.35); z-index:1; font-family: var(--sans);">Add your hero image here</span>
+    </div>
+  </div>
+  <div class="hero-stat-bar">
+    <div class="stat-item">
+      <span class="stat-num">500+</span>
+      <span class="stat-label">Vetted Ambassadors</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">200+</span>
+      <span class="stat-label">Events Staffed</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">50+</span>
+      <span class="stat-label">Brand Partners</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">GTA</span>
+      <span class="stat-label">& Beyond</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" id="about">
+  <span class="section-tag">Who We Are</span>
+  <h2>We put the <em>right people</em><br/>in front of your audience.</h2>
+  <p>
+    Elles Staffing is a boutique brand ambassador and experiential staffing agency based in Toronto. We curate and deploy talented, trained, and charismatic individuals who embody your brand — from high-traffic trade shows to intimate product launches, pop-up activations, and everything in between.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <h2>What we<br/>bring to your<br/>brand.</h2>
+    <p>From concept to execution, our staffing solutions elevate every consumer touchpoint with presence and professionalism.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-num">01</span>
+      <div class="service-icon">🤝</div>
+      <h3 class="service-title">Brand Ambassadors</h3>
+      <p class="service-desc">Passionate, on-brand representatives who connect authentically with your target audience at events, retail activations, and experiential campaigns.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">02</span>
+      <div class="service-icon">🎪</div>
+      <h3 class="service-title">Experiential Activations</h3>
+      <p class="service-desc">Full-staffing solutions for immersive brand experiences, product sampling, pop-ups, and street marketing campaigns that generate real engagement.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">03</span>
+      <div class="service-icon">🏆</div>
+      <h3 class="service-title">Trade Show Staffing</h3>
+      <p class="service-desc">Professional booth staff, lead generators, and brand representatives who command attention and convert foot traffic at expos and conferences.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">04</span>
+      <div class="service-icon">🎬</div>
+      <h3 class="service-title">Promotional Modelling</h3>
+      <p class="service-desc">Agency-quality promotional models and spokespersons for product launches, corporate events, photo shoots, and marketing campaigns.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">05</span>
+      <div class="service-icon">🎉</div>
+      <h3 class="service-title">Event Staffing</h3>
+      <p class="service-desc">Greeters, hosts, registration staff, and hospitality talent for corporate events, galas, festivals, and consumer-facing activations of any scale.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">06</span>
+      <div class="service-icon">📱</div>
+      <h3 class="service-title">Influencer & Content</h3>
+      <p class="service-desc">Talent who can create authentic social content at your events — amplifying reach beyond the room and delivering earned media value.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ELLES -->
+<section class="why">
+  <div class="why-left">
+    <span class="section-tag">Why Elles</span>
+    <h2>Staffing with<br/><em>intention.</em></h2>
+    <p>We don't just fill shifts — we match the right talent to the right brand. Our ambassadors are briefed, trained, and aligned with your campaign objectives before they ever step on-site.</p>
+    <ul class="why-list">
+      <li>Rigorous talent screening and brand-fit matching</li>
+      <li>Custom training and brand briefings for every activation</li>
+      <li>Real-time event management and on-site support</li>
+      <li>Post-event reporting and campaign performance insights</li>
+      <li>Bilingual talent available across English, French, and more</li>
+    </ul>
+  </div>
+  <div class="why-right">
+    <div class="why-card">
+      <span class="why-card-num">72hr</span>
+      <span class="why-card-label">Average booking-to-deployment turnaround</span>
+    </div>
+    <div class="why-card accent">
+      <span class="why-card-num">100%</span>
+      <span class="why-card-label">Client satisfaction on managed activations</span>
+    </div>
+    <div class="why-card dark">
+      <span class="why-card-num">Bilingual</span>
+      <span class="why-card-label">English & French talent across the GTA and beyond — ideal for national campaigns</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="process-inner">
+    <span class="section-tag">How It Works</span>
+    <h2>From brief to<br/>brand moment.</h2>
+    <div class="process-steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3 class="step-title">Discovery</h3>
+        <p class="step-desc">We learn your brand, your goals, and your audience to understand exactly what kind of talent will make your activation a success.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3 class="step-title">Curation</h3>
+        <p class="step-desc">From our vetted roster, we handpick ambassadors whose look, personality, and experience align precisely with your brand identity.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3 class="step-title">Preparation</h3>
+        <p class="step-desc">Selected talent receives a detailed brand briefing, product training, and activation objectives so they show up ready and confident.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <h3 class="step-title">Activation</h3>
+        <p class="step-desc">We manage on-site logistics so you can focus on your brand. Post-activation, we share performance data and audience insights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="industries-inner">
+    <span class="section-tag">Industries We Serve</span>
+    <h2>Wherever your audience is,<br/>we have talent ready.</h2>
+    <div class="industry-grid">
+      <div class="industry-item">
+        <span class="industry-icon">🍷</span>
+        <h4 class="industry-name">Food & Beverage</h4>
+        <p class="industry-desc">Product sampling, tastings, and launch events for CPG, wine, spirits, and beverage brands.</p>
+      </div>
+      <div class="industry-item">
+        <span class="industry-icon">💄</span>
+        <h4 class="industry-name">Beauty & Lifestyle</h4>
+        <p class="industry-desc">In-store demos, beauty activations, influencer events, and skincare launch campaigns.</p>
+      </div>
+      <div class="industry-item">
+        <span class="industry-icon">👟</span>
+        <h4 class="industry-name">Fashion & Retail</h4>
+        <p class="industry-desc">Retail activations, lookbook shoots, brand popups, and fashion week support staffing.</p>
+      </div>
+      <div class="industry-item">
+        <span class="industry-icon">🎮</span>
+        <h4 class="industry-name">Tech & Gaming</h4>
+        <p class="industry-desc">Conference and expo staffing, product demos, and launch event ambassadors for tech brands.</p>
+      </div>
+      <div class="industry-item">
+        <span class="industry-icon">🏋️</span>
+        <h4 class="industry-name">Health & Wellness</h4>
+        <p class="industry-desc">Fitness expos, supplement sampling, wellness events, and health brand activations.</p>
+      </div>
+      <div class="industry-item">
+        <span class="industry-icon">🎵</span>
+        <h4 class="industry-name">Music & Entertainment</h4>
+        <p class="industry-desc">Festival staffing, concert activations, label events, and entertainment brand campaigns.</p>
+      </div>
+      <div class="industry-item">
+        <span class="industry-icon">🏦</span>
+        <h4 class="industry-name">Finance & Fintech</h4>
+        <p class="industry-desc">Corporate event staffing, financial services brand activations, and roadshow support.</p>
+      </div>
+      <div class="industry-item">
+        <span class="industry-icon">🌿</span>
+        <h4 class="industry-name">Sustainability & Social</h4>
+        <p class="industry-desc">Mission-driven brand campaigns, community events, and purpose-forward activations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROSTER / TALENT -->
+<section class="roster" id="talent">
+  <div class="roster-inner">
+    <span class="section-tag">Our Talent</span>
+    <h2>A roster built on<br/>excellence and diversity.</h2>
+    <p>Our ambassadors are more than just good-looking — they are trained communicators, brand storytellers, and consumer connectors. Every individual on our roster is personally vetted by the Elles team.</p>
+    <div class="roster-features">
+      <div class="roster-feat">
+        <h4 class="roster-feat-title">Diversity & Representation</h4>
+        <p class="roster-feat-desc">Our roster reflects Canada's multicultural landscape — we match your brand to talent your audience will genuinely connect with.</p>
+      </div>
+      <div class="roster-feat">
+        <h4 class="roster-feat-title">Training & Professionalism</h4>
+        <p class="roster-feat-desc">All talent complete our brand ambassador certification process covering communication, brand literacy, and consumer engagement.</p>
+      </div>
+      <div class="roster-feat">
+        <h4 class="roster-feat-title">Scalable for Any Event</h4>
+        <p class="roster-feat-desc">From a single spokesperson to a 50-person activation team — we scale to your needs with the same quality standards.</p>
+      </div>
+    </div>
+    <a href="#contact" class="btn-primary">Join Our Roster</a>
+  </div>
+</section>
+
+<!-- MEET THE TEAM -->
+<section class="team" id="team">
+  <div class="team-inner">
+    <span class="section-tag">Our People</span>
+    <h2>Meet the team<br/>behind Elles.</h2>
+    <p>A small but mighty crew of operators, creatives, and connectors — building something special from the ground up.</p>
+
+    <div class="team-layer-label">Leadership &amp; Operations</div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar founder">J</div>
+        <div class="team-role">Founder &amp; CEO</div>
+        <div class="team-name">Joyce</div>
+        <div class="team-layer-badge">Leadership</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar ops">E</div>
+        <div class="team-role">Operations &amp; Scheduling Coordinator</div>
+        <div class="team-name">Eva</div>
+        <div class="team-layer-badge">Operations</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar talent">C</div>
+        <div class="team-role">Talent Acquisition Specialist</div>
+        <div class="team-name">Corinne</div>
+        <div class="team-layer-badge">Operations</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar marketing">L</div>
+        <div class="team-role">Marketing &amp; Strategy Lead</div>
+        <div class="team-name">Leah</div>
+        <div class="team-layer-badge">Operations</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar client">J</div>
+        <div class="team-role">Client Services &amp; Account Manager</div>
+        <div class="team-name">Joe</div>
+        <div class="team-layer-badge">Operations</div>
+      </div>
+    </div>
+
+    <div class="team-layer-label">Ambassador Team Leads</div>
+    <div class="team-leads-grid">
+      <div class="team-card open">
+        <div class="team-avatar tbd">?</div>
+        <div class="team-role">Team Lead</div>
+        <div class="team-name">Coming Soon</div>
+        <div class="team-layer-badge">Field · Open Role</div>
+      </div>
+      <div class="team-card open">
+        <div class="team-avatar tbd">?</div>
+        <div class="team-role">Team Lead</div>
+        <div class="team-name">Coming Soon</div>
+        <div class="team-layer-badge">Field · Open Role</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-block">
+    <h2>Ready to put the<br/><em>right faces</em> on your brand?</h2>
+    <div class="cta-block-btns">
+      <a href="#contact" class="btn-white">Book Talent Today</a>
+      <a href="#talent" class="btn-outline-white">Join Our Roster</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <span class="section-tag">Get in Touch</span>
+      <h2>Let's build something unforgettable.</h2>
+      <p>Whether you're a brand looking to book talent or an individual wanting to join our roster, we'd love to hear from you.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-item-label">Location</span>
+          <span>Toronto, Ontario<br/>Serving across Canada</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Email</span>
+          <span>hello@ellesstaffing.ca</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Follow</span>
+          <span>@ellesstaffing</span>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="return false;">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="company">Company / Brand</label>
+        <input type="text" id="company" placeholder="Your company name" />
+      </div>
+      <div class="form-group">
+        <label for="inquiry">Inquiry Type</label>
+        <select id="inquiry">
+          <option value="">Select an inquiry type</option>
+          <option>Book Brand Ambassadors</option>
+          <option>Experiential Staffing</option>
+          <option>Trade Show Staffing</option>
+          <option>Join Our Roster</option>
+          <option>General Inquiry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Tell us about your event, timeline, and staffing needs…"></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Elles<span>.</span></div>
+      <p class="footer-tagline">Toronto's premier brand ambassador and experiential staffing agency. Talent that moves people.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link">IG</a>
+        <a href="#" class="social-link">LI</a>
+        <a href="#" class="social-link">TK</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#">Brand Ambassadors</a></li>
+        <li><a href="#">Experiential Staffing</a></li>
+        <li><a href="#">Trade Show Staffing</a></li>
+        <li><a href="#">Promotional Modelling</a></li>
+        <li><a href="#">Event Staffing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#">About Elles</a></li>
+        <li><a href="#">Our Talent</a></li>
+        <li><a href="#">Industries</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="#">Book Talent</a></li>
+        <li><a href="#">Join Our Roster</a></li>
+        <li><a href="#">hello@ellesstaffing.ca</a></li>
+        <li><a href="#">Toronto, Ontario</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Elles Staffing. All rights reserved.</p>
+    <p>Privacy Policy · Terms of Service</p>
+  </div>
+</footer>
+
+</body>
+</html>
